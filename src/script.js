@@ -11,16 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   button.addEventListener('click', () => {
     initializeGame();
-    currentScore = 0;
     updateScore(0);
+    currentScore = 0;
+
     button.classList.remove('start');
     button.classList.add('restart');
     startMessage.classList.add('hidden');
     winMessage.classList.add('hidden');
     loseMessage.classList.add('hidden');
   });
-
-  const gameOverElem = document.getElementById('game-over');
 
   // Function to update the score
   function updateScore(value) {
@@ -138,21 +137,25 @@ document.addEventListener('DOMContentLoaded', () => {
       renderBoard();
       gameOverCheck();
     }
+
     //Emulate finish game cases
     if (direction === 'e') {
       console.log('emulate lose game case');
       emulateLoseGame();
       gameOverCheck();
     }
+
     if (direction === 'w') {
       console.log('emulate win game case');
       emulateWinGame();
       gameOverCheck();
     }
   }
+
   function moveRight(row) {
     const noZeroRow = row.filter((cell) => cell !== 0);
     const moveRightRow = [];
+
     for (let i = noZeroRow.length - 1; i >= 0; i--) {
       const cell = noZeroRow[i];
 
@@ -164,6 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
         moveRightRow.push(cell);
       }
     }
+
     moveRightRow.reverse();
 
     while (moveRightRow.length < 4) {
@@ -203,6 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
       [512, 1024, 2048, 0],
       [0, 1024, 1024, 4096],
     ];
+
     board = emulateBoard;
     renderBoard();
   }
@@ -214,6 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
       [2, 4, 8, 4],
       [4, 8, 2, 0],
     ];
+
     board = emulateBoard;
     renderBoard();
   }
@@ -236,6 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     }
+
     //Check horizontal marge
     for (let i = 0; i < size; i++) {
       for (let j = 0; j < size - 1; j++) {
@@ -245,8 +252,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    //Game over baby
-    // gameOverElem.style.display = 'flex';
     loseMessage.classList.remove('hidden');
   }
 
