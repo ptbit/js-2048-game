@@ -6,11 +6,13 @@
 
 ## Demo:
 
-To view demo: [click here](https://ptbit.github.io/js-2048-game/)
+Try to play 2048 Game: [click here](https://ptbit.github.io/js-2048-game/)
 
 ## Description:
 
-This project is a recreation of the popular game 2048. It showcases my skills in JS. The entire game logic is written using the functional programming method.
+This project is a recreation of the popular game 2048.\
+It showcases my skills in JS.\
+The entire game logic is written using the **functional** programming method.
 
 To simplify testing of lose/win cases, hotkeys are provided:\
 `e` - for lose game case\
@@ -18,10 +20,11 @@ To simplify testing of lose/win cases, hotkeys are provided:\
 
 ## Feature:
 
-⚡️ Based on FIGMA project\
+⚡️ Simple and intuitive game interface\
 ⚡️ Functional programming\
+⚡️ Pure JS no frameworks\
 ⚡️ Simple final cases tests\
-⚡️ Valid JS\
+⚡️ Valid JS
 
 ## Technologies used:
 
