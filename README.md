@@ -1,4 +1,4 @@
-# Responsive landing page
+# 2048 Game
 
 ## Preview:
 
